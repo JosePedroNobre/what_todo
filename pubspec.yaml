@@ -1,0 +1,52 @@
+name: what_todo
+description: App to track your tasks for the day
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.4 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  json_serializable: ^6.6.1
+  json_annotation: ^4.8.0
+  dio: ^5.0.1
+  flutter_svg: ^2.0.2
+  flutter_bloc: ^8.1.1
+  equatable: ^2.0.3
+  animated_notch_bottom_bar: ^0.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  mockito: ^5.0.16
+  flutter_launcher_icons: ^0.10.0
+  dart_jsonwebtoken: ^2.4.0
+  build_runner: ^2.1.4
+  bloc_test: ^9.0.1
+  dart_code_metrics: ^5.6.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - test/stubs/
+
+  fonts:
+    - family: NibPro
+      fonts:
+        - asset: fonts/NibPro/NibPro-Light.ttf
+          weight: 300
+        - asset: fonts/NibPro/NibPro-Regular.ttf
+          weight: 400
+        - asset: fonts/NibPro/NibPro-Bold.ttf
+          weight: 700
