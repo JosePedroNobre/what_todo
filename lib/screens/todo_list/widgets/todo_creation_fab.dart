@@ -16,13 +16,14 @@ class TodoCreationFAB extends StatelessWidget {
             return AlertDialog(
               title: const Text('Create Todo'),
               content: TextField(
+                controller: textEditingController,
                 autofocus: true,
                 decoration: const InputDecoration(
                   labelText: 'Todo',
                 ),
                 onSubmitted: (String value) {
                   BlocProvider.of<TodoCubit>(context).addTodoItem(textEditingController.text);
-
+                  textEditingController.clear();
                   // Close the dialog
                   Navigator.pop(context);
                 },
@@ -30,6 +31,7 @@ class TodoCreationFAB extends StatelessWidget {
               actions: [
                 TextButton(
                   onPressed: () {
+                    textEditingController.clear();
                     Navigator.pop(context);
                   },
                   child: const Text('Cancel'),
@@ -37,6 +39,7 @@ class TodoCreationFAB extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     BlocProvider.of<TodoCubit>(context).addTodoItem(textEditingController.text);
+                    textEditingController.clear();
                     // Close the dialog
                     Navigator.pop(context);
                   },
