@@ -37,7 +37,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
               slivers: [const TodoAppBar(title: 'My TODOs'), TodoList(listOfTodo: state.listOfTodo)],
             );
           }
-          return const Text("Error");
+          return const Text("Error Loading TODO's");
         },
       ),
     ));

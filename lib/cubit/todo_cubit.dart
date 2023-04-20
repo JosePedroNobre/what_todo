@@ -1,9 +1,8 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:what_todo/network/api_error.dart';
 import 'package:what_todo/network/models/todo.dart';
 import 'package:what_todo/todo_repository.dart';
-
+import 'package:bloc/bloc.dart';
 part 'todo_state.dart';
 
 class TodoCubit extends Cubit<TodoState> {
